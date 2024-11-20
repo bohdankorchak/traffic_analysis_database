@@ -8,8 +8,8 @@ CREATE TABLE routes (
     start_lat FLOAT NOT NULL, -- Початкова широта
     start_lng FLOAT NOT NULL, -- Початкова довгота
     end_address TEXT NOT NULL, -- Кінцева адреса
-    end_lat FLOAT NOT NULL, -- Кінцева широта
-    end_lng FLOAT NOT NULL, -- Кінцева довгота
+    end_lat FLOAT, -- Кінцева широта
+    end_lng FLOAT, -- Кінцева довгота
     distance_text VARCHAR(50) NOT NULL, -- Відстань текстом
     distance_value INTEGER NOT NULL, -- Відстань у метрах
     duration_text VARCHAR(50) NOT NULL, -- Тривалість текстом
@@ -26,8 +26,8 @@ CREATE TABLE route_segments (
     start_lng FLOAT NOT NULL, -- Початкова довгота сегмента
     end_lat FLOAT NOT NULL, -- Кінцева широта сегмента
     end_lng FLOAT NOT NULL, -- Кінцева довгота сегмента
-    duration_in_traffic INTEGER NOT NULL, -- Тривалість у пробках
-    normal_duration INTEGER NOT NULL, -- Нормальна тривалість
+    duration_in_traffic INTEGER, -- Тривалість у пробках
+    normal_duration INTEGER, -- Нормальна тривалість
     polyline TEXT NOT NULL -- Полілайн сегмента
 );
 
